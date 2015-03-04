@@ -146,6 +146,7 @@ namespace WindowsGame1
                 }
             }
 
+            * 
             allienTimeSinceLastFrame += gameTime.ElapsedGameTime.Milliseconds;
             if (allienTimeSinceLastFrame > allienMillisecondsPerFrame)
                 {
