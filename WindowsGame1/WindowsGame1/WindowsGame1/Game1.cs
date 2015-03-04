@@ -16,6 +16,12 @@ namespace WindowsGame1
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+        AudioEngine audioEngine;
+        WaveBank waveBank;
+        SoundBank soundBank;
+        Cue trackCue;
+        SoundEffect soundEffect;
+        protected Song song;
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         SpriteManager spriteManager;
@@ -83,6 +89,21 @@ namespace WindowsGame1
         /// </summary>
         protected override void LoadContent()
         {
+            soundEffect = Content.Load<SoundEffect>(@"Audio\opentreasurechest");
+            song = Content.Load<Song>(@"Audio\RondoVenezianoCattedrali");
+        //   audioEngine = new AudioEngine(@"Content/Audio/GameAudio.xgs");
+         //   waveBank = new WaveBank(audioEngine, @"Content\Audio\Wave Bank.xwb");
+         //   soundBank = new SoundBank(audioEngine, @"Content\Audio\Sound Bank.xsb");
+            // Start the soundtrack audio
+            // Start the soundtrack audio
+          // Cue trackCue = soundBank.GetCue("horsebattlemusic");
+            //trackCue.Play();
+       
+            // Play the start sound
+           // soundBank.PlayCue("opentreasurechest");
+            // Play the sound
+            soundEffect.Play();
+            MediaPlayer.Play(song); 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
            // texture = Content.Load<Texture2D>(@"images\ship");
@@ -169,7 +190,7 @@ namespace WindowsGame1
                         if (Collide())
                             Exit();
             */
-
+         //   audioEngine.Update();
                         base.Update(gameTime);
         }
 
@@ -197,9 +218,10 @@ namespace WindowsGame1
                     allienFrameSize.X,
                     allienFrameSize.Y),
                     Color.White, 0, Vector2.Zero,
-                    1, SpriteEffects.None, 0);*/
+                    1, SpriteEffects.None, 0); */
             spriteBatch.End();
             base.Draw(gameTime);
         }
+
     }
 }

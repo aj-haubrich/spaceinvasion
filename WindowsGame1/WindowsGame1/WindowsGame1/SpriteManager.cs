@@ -172,7 +172,7 @@ namespace WindowsGame1
         //    position, new Point(52, 45), 10, new Point(22, 0),
         //new Point(12, 1), speed));
         spriteList.Add(new AllienSprite(Game.Content.Load<Texture2D>(@"images\miniufo"),
-        position, new Point(54, 45), 10, new Point(70, 0),
+        position, new Point(54, 45), 10, new Point(22, 0),
         new Point(12, 1), speed, this));
         }
 
