@@ -91,13 +91,13 @@ namespace WindowsGame1
         {
             soundEffect = Content.Load<SoundEffect>(@"Audio\opentreasurechest");
             song = Content.Load<Song>(@"Audio\RondoVenezianoCattedrali");
-        //   audioEngine = new AudioEngine(@"Content/Audio/GameAudio.xgs");
-         //   waveBank = new WaveBank(audioEngine, @"Content\Audio\Wave Bank.xwb");
-         //   soundBank = new SoundBank(audioEngine, @"Content\Audio\Sound Bank.xsb");
+           audioEngine = new AudioEngine(@"Content/Audio/GameAudio.xgs");
+            waveBank = new WaveBank(audioEngine, @"Content\Audio\Wave Bank.xwb");
+            soundBank = new SoundBank(audioEngine, @"Content\Audio\Sound Bank.xsb");
             // Start the soundtrack audio
             // Start the soundtrack audio
-          // Cue trackCue = soundBank.GetCue("horsebattlemusic");
-            //trackCue.Play();
+           Cue trackCue = soundBank.GetCue("horse battle music");
+            trackCue.Play();
        
             // Play the start sound
            // soundBank.PlayCue("opentreasurechest");
